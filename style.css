@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 50px;
+}
+
+h6 {
+  margin-bottom: 25px;
+}
+
+.thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 50%;
+}
+
+.initial {
+  border-color: #ebebff #d8d8ff #c4c4ff #b1b1ff;
+  animation: ring1 10s cubic-bezier(0.35, -0.14, 0.79, 1.22) infinite;
+}
+
+.ring1 {
+  animation: ring1 10s cubic-bezier(0.35, -0.14, 0.79, 1.22) infinite;
+  border-image: linear-gradient(#ebebff, #d8d8ff, #c4c4ff, #b1b1ff);
+  border-image-slice: 1;
+}
+
+.ring2 {
+  border-color: #d8d8ff #c4c4ff #b1b1ff #ebebff;
+  animation: ring2 5s cubic-bezier(0.35, -0.14, 0.79, 1.22) infinite;
+}
+
+.ring3 {
+  border-color: #c4c4ff #b1b1ff #ebebff #d8d8ff;
+}
+
+.ring4 {
+  border-color: #b1b1ff #ebebff #d8d8ff #c4c4ff;
+}
+
+@keyframes ring1 {
+  100% {
+    transform: rotateZ(2turn);
+  }
+}
+@keyframes ring2 {
+  100% {
+    transform: rotateZ(-2turn);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
